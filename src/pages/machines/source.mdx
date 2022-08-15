@@ -1,0 +1,14 @@
+---
+title: Source of yieldmachine
+description: Full source code of yieldmachine
+layout: ../../layouts/MainLayout.astro
+---
+
+import AsyncCode from '../../components/AsyncCode.astro';
+export const source = fetch(
+  "https://raw.githubusercontent.com/JavaScriptRegenerated/yieldmachine/master/packages/yieldmachine/src/index.ts"
+).then((res) => res.text());
+
+Source of [yieldmachine](https://github.com/JavaScriptRegenerated/yieldmachine):
+
+<AsyncCode code={source} lang="js" />
