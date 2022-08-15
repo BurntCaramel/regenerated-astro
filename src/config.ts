@@ -1,3 +1,11 @@
+if (typeof Buffer === "undefined") {
+	globalThis.Buffer = {
+		byteLength(string) {
+			return new TextEncoder().encode(string).length
+		}
+	}
+}
+
 export const SITE = {
 	title: 'JavaScript Regenerated',
 	description: 'Your website description.',
