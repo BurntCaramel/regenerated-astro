@@ -1,7 +1,8 @@
+// Temporary fix for https://github.com/withastro/astro/issues/4323
 if (typeof Buffer === "undefined") {
 	globalThis.Buffer = {
 		byteLength(string) {
-			return new TextEncoder().encode(string).length
+			return new TextEncoder().encode(string).byteLength;
 		}
 	}
 }
