@@ -8,6 +8,9 @@ import deno from '@astrojs/deno';
 export default defineConfig({
 	output: 'server',
 	adapter: deno(),
+	server: {
+		port: 4999,
+	},
 	integrations: [
 		// Enable Preact to support Preact JSX components.
 		preact(),
