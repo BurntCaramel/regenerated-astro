@@ -7,7 +7,7 @@ const langCode = getLanguageFromURL(currentPage);
 
 const sidebarSections = [];
 
-for (const section of [SIDEBAR.parser, SIDEBAR.machines]) {
+for (const section of [SIDEBAR.machines, SIDEBAR.parser]) {
 	for (const item of section) {
 		if (item.header) {
 			sidebarSections.push({ ...item, children: [] });
